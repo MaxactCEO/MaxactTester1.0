@@ -1,0 +1,103 @@
+        <div id="habitStatsContainer" style="width: 100%; margin-bottom: 20px;"></div>
+
+        <div id="habitStatsContainer" class="repost-container"></div> 
+
+        <div id="frequentHabitsContainer" class="repost-container"></div> 
+
+
+
+        <button onclick="myFunction()">Visa vanor</button>
+        <button name="VisaVanor"></button>
+          <!-- Visa / dölja knappen till sektion 5 börjar här -->
+        <div id="ShowHide">
+          <button onclick="Formulär()">Lägg till ny vana</button>
+          <!-- Visa / dölja knappen till sektion 5 börjar här -->
+        <div id="ShowFormulär">
+
+            <center>
+              <hr>
+              <h3>Add new habit</h1>
+            </center>
+              
+            <form id="Enkät">
+                <!-- Kategori -->
+                <label for="Kategori">Category:</label>
+                <select id="Kategori" name="Kategori" required>
+                    <option value="">Choose category</option>
+                    <option value="Kost">Diet</option>
+                    <option value="Kosttillskott">Dietary supplements</option>
+                    <option value="Dryck">Beverage</option>
+                    <option value="Träning">Training</option>
+                    <option value="Fysisk aktivitet">Physical activity</option>
+                    <option value="Fotbollsträning">Soccer practice</option>
+                    <option value="Sömn">Sleep</option>
+                    <option value="Övrigt">Other</option>
+                </select>
+    
+                <!-- Dynamiska fält -->
+                <div id="dynamic-fields"></div>
+    
+                <!-- Datumfält -->
+                <label for="Datum">Date:</label>
+                <input type="date" id="Datum" name="Datum" required>
+    
+                <!-- Tidsfält -->
+                <label for="Tid">Time:</label>
+                <input type="time" id="Tid" name="Tid" required>
+    
+                <!-- Beskrivning -->
+                <label for="Beskrivning">Description:</label>
+                <textarea id="Beskrivning" name="Beskrivning" rows="4" placeholder="Describe your habit"></textarea>
+    
+                <!-- Skicka-knapp -->
+                <input type="submit" value="Send">
+            </form> 
+            <script>
+              function Formulär() {
+                var x = document.getElementById("ShowFormulär");
+                if (x.style.display === "none") {
+                  x.style.display = "block";
+                } else {
+                  x.style.display = "none";
+                }
+              }
+      // Här är visa / dölja kanppen för formuläret
+      
+              </script>
+        </div>
+          <ul id="myMenu">
+            <center>
+              <hr>
+              <h3>Alla vanor</h1>
+            </center>
+            
+                    <li><a href="#">All</a></li>  <!-- Lägg till denna rad -->
+                    <li><a href="#">Diet</a></li>
+                    <li><a href="#">Beverage</a></li>
+                    <li><a href="#">Kosttillskott</a></li>
+                    <li><a href="#">Träning</a></li>
+                    <li><a href="#">Fysisk aktivitet</a></li>
+                    <li><a href="#">Fotbollsträning</a></li>
+                    <li><a href="#">Sömn</a></li>
+                    <li><a href="#">Övrigt</a></li>
+                    <!-- ... resten av dina menyalternativ ... -->
+          </ul>
+  
+          <!-- Repost Container -->
+          <div id="repostContainer" class="repost-container"></div>  
+
+
+        </div>
+        
+        <script>
+        function myFunction() {
+          var x = document.getElementById("ShowHide");
+          if (x.style.display === "none") {
+            x.style.display = "block";
+          } else {
+            x.style.display = "none";
+          }
+        }
+// Här är visa / dölja kanppen för formuläret
+
+        </script>
